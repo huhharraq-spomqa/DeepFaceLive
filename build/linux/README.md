@@ -8,7 +8,7 @@
 * Docker
 * nvidia-container-toolkit
 
-# The improved docker file will take care of all of these depends for you
+# The improved docker file will take care of all of the python depends for you
 
 ### Setup
 
