@@ -21,7 +21,7 @@ git clone https://github.com/huhharraq-spomqa/DeepFaceLive/
 cd DeepFaceLive/build/linux/
 # add permissiveness to x11.
 xhost +
-# updated docker file will properly install and run DeepFaceLive properly on linux with full gpu support and running with -c allows camera access. Invoke bash script each time you want to run DeepFaceLive.
+# updated docker file will install and run DeepFaceLive properly on linux with full gpu support and running with -c allows camera access. Invoke bash script each time you want to run DeepFaceLive.
 ./start.sh -c
 
 Usage of ./start.sh
