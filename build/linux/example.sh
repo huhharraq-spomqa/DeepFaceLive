@@ -1,2 +1,2 @@
 #!/bin/bash
-python main.py run DeepFaceLive --userdata-dir /data/
+python3 main.py run DeepFaceLive --userdata-dir /data/
