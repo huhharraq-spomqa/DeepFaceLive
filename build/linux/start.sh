@@ -37,7 +37,7 @@ shift "$(($OPTIND -1))"
 printf "\n"
 
 # Build the Docker image with the NVIDIA version argument
-DOCKER_BUILDKIT=1 docker build . --build-arg NV_VER="$NV_VER"
+DOCKER_BUILDKIT=1 docker build -t deepfacelive . --build-arg NV_VER="$NV_VER"
 
 # Allow X11 access (optional, note the security warning)
 xhost +
