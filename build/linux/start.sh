@@ -1,8 +1,16 @@
 #!/bin/bash
 
-# Get the NVIDIA kernel module and version
-NV_LIB=$(locate nvidia.ko | grep $(uname -r) | grep dkms | head -1)
-NV_VER=$(modinfo "$NV_LIB" | grep ^version | awk '{print $2}' | awk -F '.' '{print $1}')
+# Search for the nvidia.ko module in common locations
+NV_LIB=$(find /lib/modules/$(uname -r)/kernel/drivers/video/ /usr/lib/modules/$(uname -r)/extramodules/ -name nvidia.ko.zst 2>/dev/null | head -n 1)
+
+# If a module is found, get the version
+if [ -n "$NV_LIB" ]; then
+  NV_VER=$(modinfo "$NV_LIB" | grep ^version | awk '{print $2}' | awk -F '.' '{print $1}')
+  echo "Found Nvidia module: $NV_LIB"
+  echo "Nvidia Driver Version: $NV_VER"
+else
+  echo "Nvidia module not found!"
+fi
 
 # Set the default data folder
 DATA_FOLDER=$(pwd)/data/
