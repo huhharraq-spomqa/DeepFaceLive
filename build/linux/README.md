@@ -19,7 +19,7 @@ Install nvidia container toolkit via instructions required for your distro.
 Configure for docker: sudo nvidia-ctk runtime configure --runtime=docker
 Restart docker service. If not already set up.
 
-Last dependencies 2 just in case since Arch is minimal and im on a new sytem. Or if your situation doesnt lead to already having them installed for whatever reason. Just install with your package manager if you don't already have them
+Last 2 dependencies just in case since Arch is minimal and im on a new sytem. Or if your situation doesnt lead to already having them installed for whatever reason. Just install with your package manager if you don't already have them
 
 git clone https://github.com/huhharraq-spomqa/DeepFaceLive/
 cd DeepFaceLive/build/linux/
